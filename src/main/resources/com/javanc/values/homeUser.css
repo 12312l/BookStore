@@ -1,0 +1,66 @@
+.header {
+    -fx-background-color: #fff;
+}
+
+.tf-find {
+    -fx-background-radius: 15px 0px 0px 15px;
+}
+
+.btn-find{
+    -fx-background-color: linear-gradient(to bottom right, #ee3838, #bf3b26);
+    -fx-cursor:hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-background-radius: 0px 15px 15px 0px;
+}
+
+.btn-find:hover{
+    -fx-background-color: linear-gradient(to bottom right, #cc4820, #ee3600);
+}
+
+.borderPane{
+    -fx-background-color: #FFEFD5;
+}
+.nav-form{
+       -fx-background-color: #fff;
+}
+
+.radius {
+    -fx-background-radius:8px;
+}
+
+.white-bg{
+    -fx-background-color: #fff;
+}
+
+.shawdown {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5,0,0,0)
+}
+
+.menuButton{
+    -fx-background-color: #fff;
+    -fx-font-size: 15px;
+}
+
+.menuItem:hover{
+     -fx-background-color: #ccc;
+}
+
+.tf-formBuy{
+    -fx-border-color: gray;
+    -fx-border-width: 1;
+    -fx-border-radius: 5px;
+}
+
+.btn_pay{
+    -fx-background-color: #CD853F;
+    -fx-text-fill: #fff;
+}
+
+.btn_pay:hover{
+    -fx-background-color: #F4A460;
+    -fx-text-fill: #000000;
+;
+
+}
+

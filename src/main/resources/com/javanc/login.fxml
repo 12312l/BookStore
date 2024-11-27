@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javanc.controller.loginController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <AnchorPane fx:id="si_loginForm" layoutX="400.0" prefHeight="600.0" prefWidth="400.0" styleClass="white-form" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="180.0" styleClass="head-lable" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Login Account " textFill="#238989">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="si_username" layoutX="40.0" layoutY="221.0" onAction="#loginBtn" prefHeight="40.0" prefWidth="300.0" promptText="Username" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <PasswordField fx:id="si_password" layoutX="40.0" layoutY="284.0" onAction="#loginBtn" prefHeight="40.0" prefWidth="300.0" promptText="Password" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <Button fx:id="si_loginBtn" layoutX="40.0" layoutY="359.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="40.0" prefWidth="300.0" styleClass="login-btn" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Login" />
+                  <Hyperlink fx:id="si_forgetPass" layoutX="40.0" layoutY="324.0" onAction="#switchForgetPassword" text="Forgot Password?">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="su_signupForm" layoutX="3.0" layoutY="2.0" prefHeight="600.0" prefWidth="400.0" styleClass="white-form" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="24.0" styleClass="head-lable" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Register Account" textFill="#238989">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <TextField fx:id="su_fullname" layoutX="40.0" layoutY="74.0" onAction="#registerBtn" prefHeight="40.0" prefWidth="300.0" promptText="Fullname" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <TextField fx:id="su_username" layoutX="40.0" layoutY="125.0" onAction="#registerBtn" prefHeight="40.0" prefWidth="300.0" promptText="Username" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <PasswordField fx:id="su_password" layoutX="40.0" layoutY="178.0" onAction="#registerBtn" prefHeight="40.0" prefWidth="300.0" promptText="Password" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <TextField fx:id="su_email" layoutX="40.0" layoutY="231.0" onAction="#registerBtn" prefHeight="40.0" prefWidth="300.0" promptText="Email" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <TextField fx:id="su_phone" layoutX="40.0" layoutY="288.0" onAction="#registerBtn" prefHeight="40.0" prefWidth="300.0" promptText="Phone" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <TextField fx:id="su_address" layoutX="40.0" layoutY="342.0" onAction="#registerBtn" prefHeight="40.0" prefWidth="300.0" promptText="Address" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <DatePicker fx:id="su_dob" layoutX="40.0" layoutY="396.0" prefHeight="40.0" prefWidth="300.0" promptText="Date of Birthday" />
+                  <ComboBox fx:id="su_gender" layoutX="40.0" layoutY="448.0" prefHeight="40.0" prefWidth="300.0" promptText="Gender" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <Button fx:id="su_signupBtn" layoutX="50.0" layoutY="518.0" mnemonicParsing="false" onAction="#registerBtn" prefHeight="40.0" prefWidth="300.0" styleClass="login-btn" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Sign Up" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="fg_forgetPasswordForm" layoutX="400.0" layoutY="7.0" prefHeight="600.0" prefWidth="400.0" styleClass="white-form" visible="false">
+               <children>
+                  <Label layoutX="41.0" layoutY="150.0" styleClass="head-lable" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Quên mật khẩu" textFill="#238989">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fg_username" layoutX="41.0" layoutY="200.0" prefHeight="40.0" prefWidth="300.0" promptText="Username" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <TextField fx:id="fg_email" layoutX="41.0" layoutY="260.0" prefHeight="40.0" prefWidth="300.0" promptText="Email" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <Button fx:id="fg_backBtn" layoutX="42.0" layoutY="321.0" mnemonicParsing="false" onAction="#switchBackToLogin" prefHeight="40.0" prefWidth="138.0" styleClass="login-btn" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Quay lại" />
+                  <Button fx:id="fg_nextBtn" layoutX="200.0" layoutY="321.0" mnemonicParsing="false" onAction="#nextBTn" prefHeight="40.0" prefWidth="140.0" styleClass="login-btn" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Tiếp theo" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="np_newPasswordForm" layoutX="400.0" layoutY="4.0" prefHeight="600.0" prefWidth="400.0" styleClass="white-form" visible="false">
+               <children>
+                  <Label layoutX="41.0" layoutY="150.0" prefHeight="27.0" prefWidth="217.0" styleClass="head-lable" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Thiết lập lại mật khẩu" textFill="#238989">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="np_newPassword" layoutX="41.0" layoutY="202.0" onAction="#loginBtn" prefHeight="40.0" prefWidth="300.0" promptText="New password" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <PasswordField fx:id="np_confirmPassword" layoutX="41.0" layoutY="260.0" onAction="#loginBtn" prefHeight="40.0" prefWidth="300.0" promptText="Confirm password" styleClass="textfield" stylesheets="@../../../java/com/javanc/values/loginDesign.css" />
+                  <Button fx:id="np_backBtn" layoutX="42.0" layoutY="321.0" mnemonicParsing="false" onAction="#swichBackToForget" prefHeight="40.0" prefWidth="138.0" styleClass="login-btn" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Quay lại" />
+                  <Button fx:id="np_confirmBtn" layoutX="200.0" layoutY="321.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="40.0" prefWidth="140.0" styleClass="login-btn" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Xác nhận" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="side_form" prefHeight="600.0" prefWidth="400.0" styleClass="grandient" stylesheets="@../../../java/com/javanc/values/loginDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="127.0" layoutY="471.0" text="Tạo tài khoản" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="side_CreateBtn" layoutX="58.0" layoutY="510.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="300.0" styleClass="create-btn" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Tạo tài khoản mới" AnchorPane.bottomAnchor="50.0" />
+                  <Button fx:id="side_alreadtHave" layoutX="58.0" layoutY="510.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="300.0" styleClass="create-btn" stylesheets="@../../../java/com/javanc/values/loginDesign.css" text="Đã có tài khoản" visible="false" />
+
+                  <Label layoutX="100.0" layoutY="333.0" text="Book Store Management System" textFill="WHITE" />
+<!--                  <FontAwesomeIconView glyphName="BOOK" layoutX="104.0" layoutY="180.0" size="10em" />-->
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

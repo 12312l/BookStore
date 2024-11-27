@@ -1,0 +1,16 @@
+.bg{
+    -fx-background-color: 	#FFCCCC;
+    -fx-border-width: 5px;
+    -fx-border-color: #fff;
+}
+
+
+
+.viewBtn{
+    -fx-background-color: 	#fff;
+}
+
+.viewBtn:hover{
+    -fx-background-color: #33CCFF;
+    -fx-text-fill: #fff;
+}

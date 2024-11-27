@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javanc.controller.mainFormController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="7.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="600.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="-10.0" prefHeight="600.0" prefWidth="268.0" styleClass="nav-form" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" prefHeight="96.0" prefWidth="256.0" styleClass="header" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="7.0" layoutY="35.0" text="BookStore Manager System" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="28.0" layoutY="123.0" prefHeight="30.0" prefWidth="91.0" text="Welcome," textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Label fx:id="username" layoutX="119.0" layoutY="123.0" prefHeight="21.0" prefWidth="131.0" text="Duy" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Button fx:id="homepage_btn" layoutX="18.0" layoutY="195.0" mnemonicParsing="false" onAction="#changeScreenHomePage" prefHeight="40.0" prefWidth="220.0" styleClass="nav-btn" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" text="Trang chủ" />
+                              <Button fx:id="inventory_btn" layoutX="18.0" layoutY="258.0" mnemonicParsing="false" onAction="#changeScreenInventory" prefHeight="40.0" prefWidth="220.0" styleClass="nav-btn" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" text="Hàng tồn kho" />
+                              <Button fx:id="bill_btn" layoutX="17.0" layoutY="322.0" mnemonicParsing="false" onAction="#changeScreenBill" prefHeight="40.0" prefWidth="223.0" styleClass="nav-btn" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" text="Hóa đơn" />
+                              <Button fx:id="accountUser_btn" layoutX="17.0" layoutY="386.0" mnemonicParsing="false" onAction="#changeScreenAccount" prefHeight="40.0" prefWidth="223.0" styleClass="nav-btn" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" text="Tài khoản người dùng" />
+                              <Button fx:id="logout_btn" layoutX="18.0" layoutY="534.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="213.0" styleClass="nav-btn" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" text="Đăng xuất" />
+<!--                              <FontAwesomeIconView glyphName="LOGOUT" layoutX="65.0" layoutY="493.0" />-->
+                              <Pane layoutX="65.0" layoutY="493.0" />
+                           </children>
+
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="600.0" prefWidth="852.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="form_homepage" layoutX="212.0" layoutY="174.0" prefHeight="600.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="173.0" prefWidth="820.0" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="11.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shawdown" />
+                                 </styleClass>
+                                 <children>
+                                    <ScrollPane layoutX="87.0" layoutY="-7.0" prefHeight="193.0" prefWidth="820.0" styleClass="transparent" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <AnchorPane prefHeight="173.0" prefWidth="995.0">
+                                             <children>
+                                                <AnchorPane layoutX="14.0" layoutY="7.0" prefHeight="142.0" prefWidth="282.0" styleClass="nav-form" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css">
+                                                   <children>
+<!--                                                      <FontAwesomeIconView glyphName="USERS" layoutX="25.0" layoutY="83.0" size="3em" />-->
+                                                      <Label layoutX="64.0" layoutY="98.0" text="Số lượng khách hàng" />
+                                                      <Label alignment="CENTER_RIGHT" layoutX="64.0" layoutY="14.0" prefHeight="21.0" prefWidth="144.0" text="0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="308.0" layoutY="7.0" prefHeight="142.0" prefWidth="282.0" styleClass="nav-form" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="308.0" AnchorPane.topAnchor="7.0">
+                                                   <children>
+<!--                                                      <FontAwesomeIconView glyphName="DOLLAR" layoutX="25.0" layoutY="83.0" size="3em" />-->
+                                                      <Label layoutX="36.0" layoutY="98.0" prefHeight="21.0" prefWidth="189.0" text="Thu nhập ngày hôm nay" />
+                                                      <Label alignment="CENTER_RIGHT" layoutX="64.0" layoutY="14.0" prefHeight="21.0" prefWidth="144.0" text="0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="900.0" layoutY="7.0" prefHeight="142.0" prefWidth="282.0" styleClass="nav-form" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css">
+                                                   <children>
+<!--                                                      <FontAwesomeIconView glyphName="SHOPPING_CART" layoutX="25.0" layoutY="83.0" size="3em" />-->
+                                                      <Label layoutX="64.0" layoutY="98.0" text="Số hóa đon" />
+                                                      <Label alignment="CENTER_RIGHT" layoutX="64.0" layoutY="14.0" prefHeight="21.0" prefWidth="144.0" text="0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="604.0" layoutY="7.0" prefHeight="142.0" prefWidth="282.0" styleClass="nav-form" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css">
+                                                   <children>
+<!--                                                      <FontAwesomeIconView glyphName="MONEY" layoutX="25.0" layoutY="83.0" size="3em" />-->
+                                                      <Label layoutX="64.0" layoutY="98.0" text="Tổng tiền thu nhập" />
+                                                      <Label alignment="CENTER_RIGHT" layoutX="64.0" layoutY="14.0" prefHeight="21.0" prefWidth="144.0" text="0" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="14.0" layoutY="206.0" prefHeight="378.0" prefWidth="817.0" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="206.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shawdown" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="351.0" prefWidth="455.0" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="341.0" AnchorPane.topAnchor="14.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shawdown" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <children>
+                                          <AreaChart fx:id="chart_collectData" layoutX="-41.0" layoutY="-49.0" prefHeight="351.0" prefWidth="465.0" title="Biểu đồ thu thập dữ liệu trong ngày" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="519.0" layoutY="14.0" prefHeight="351.0" prefWidth="303.0" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shawdown" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <children>
+                                          <AreaChart fx:id="chart_bill" layoutX="-24.0" layoutY="-14.0" prefHeight="351.0" prefWidth="302.0" title="Biểu đồ số lượng hóa đơn" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <Separator layoutX="14.0" layoutY="195.0" prefHeight="1.0" prefWidth="823.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="inventory_form" layoutY="14.0" prefHeight="600.0" prefWidth="843.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="294.0" prefWidth="816.0" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.bottomAnchor="292.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shawdown" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="inventory_tableView" layoutX="11.0" layoutY="11.0" onMouseClicked="#inventorySelectData" prefHeight="273.0" prefWidth="795.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="11.0">
+                                      <columns>
+                                        <TableColumn fx:id="inventory_col_productID" prefWidth="115.0" text="Mã sản phẩm" />
+                                        <TableColumn fx:id="inventory_col_productName" minWidth="0.0" prefWidth="114.0" text="Tên sản phẩm" />
+                                          <TableColumn fx:id="inventory_col_productAuthor" minWidth="0.0" prefWidth="113.0" text="Tác giả" />
+                                          <TableColumn fx:id="inventory_col_productCategory" minWidth="0.0" prefWidth="119.0" text="Mã thể loại" />
+                                          <TableColumn fx:id="inventory_col_productQuantity" minWidth="0.0" prefWidth="90.0" text="Số lượng" />
+                                          <TableColumn fx:id="inventory_col_productPrice" minWidth="0.0" prefWidth="70.0" text="Giá" />
+                                          <TableColumn fx:id="inventory_col_productDescribe" minWidth="0.0" prefWidth="74.0" text="Miêu tả" />
+                                          <TableColumn fx:id="inventory_col_productImage" minWidth="0.0" prefWidth="98.0" text="Ảnh" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="14.0" layoutY="323.0" prefHeight="263.0" prefWidth="816.0" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shawdown" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="24.0" layoutY="28.0" text="Mã sản phẩm" />
+                                    <TextField fx:id="inventory_productID" layoutX="123.0" layoutY="21.0" prefHeight="30.0" prefWidth="200.0" />
+                                    <Label layoutX="24.0" layoutY="74.0" text="Tên sản phẩm" />
+                                    <TextField fx:id="inventory_productName" layoutX="123.0" layoutY="69.0" prefHeight="30.0" prefWidth="200.0" />
+                                    <Label layoutX="27.0" layoutY="121.0" text="Tác giả" />
+                                    <TextField fx:id="inventory_productAuthor" layoutX="123.0" layoutY="116.0" prefHeight="30.0" prefWidth="200.0" />
+                                    <Label layoutX="25.0" layoutY="168.0" text="Thể loại" />
+                                    <ComboBox fx:id="inventory_productCategory" layoutX="123.0" layoutY="163.0" prefHeight="30.0" prefWidth="200.0" />
+                                    <Label layoutX="371.0" layoutY="26.0" text="Số lượng" />
+                                    <TextField fx:id="inventory_productQuantity" layoutX="455.0" layoutY="23.0" prefHeight="30.0" prefWidth="200.0" />
+                                    <Label layoutX="371.0" layoutY="72.0" text="Giá" />
+                                    <TextField fx:id="inventory_productPrice" layoutX="455.0" layoutY="69.0" prefHeight="30.0" prefWidth="200.0" />
+                                    <Label layoutX="368.0" layoutY="121.0" text="Miêu tả" />
+                                    <TextField fx:id="inventory_productDescribe" layoutX="455.0" layoutY="116.0" prefHeight="30.0" prefWidth="200.0" />
+                                    <Label layoutX="369.0" layoutY="168.0" text="Ảnh" />
+                                    <Button fx:id="inventory_importBtn" layoutX="455.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleProductImageSelection" prefHeight="30.0" prefWidth="200.0" styleClass="btn" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" text="Chọn ảnh" AnchorPane.topAnchor="164.0" />
+                                    <AnchorPane layoutX="661.0" layoutY="24.0" prefHeight="180.0" prefWidth="140.0" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.rightAnchor="8.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shawdown" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <children>
+                                          <ImageView fx:id="inventory_imageView" fitHeight="180.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Button fx:id="inventory_addBtn" layoutX="45.0" layoutY="210.0" mnemonicParsing="false" onAction="#inventoryAddBtn" prefHeight="30.0" prefWidth="120.0" styleClass="btn" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" text="Thêm" AnchorPane.bottomAnchor="22.0" />
+                                    <Button fx:id="inventory_repairBtn" layoutX="203.0" layoutY="210.0" mnemonicParsing="false" onAction="#updateBtn" prefHeight="30.0" prefWidth="120.0" styleClass="btn" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" text="Sửa" AnchorPane.bottomAnchor="22.0" />
+                                    <Button fx:id="inventory_deleteBtn" layoutX="371.0" layoutY="210.0" mnemonicParsing="false" onAction="#inventoryDeleteBtn" prefHeight="30.0" prefWidth="120.0" styleClass="btn" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" text="Xóa" AnchorPane.bottomAnchor="22.0" />
+                                    <Button fx:id="inventory_updateBtn" layoutX="541.0" layoutY="210.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" styleClass="btn" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" text="Cập nhật" AnchorPane.bottomAnchor="22.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Separator layoutX="14.0" layoutY="315.0" prefHeight="0.0" prefWidth="814.0" AnchorPane.bottomAnchor="282.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="form_bill" layoutX="75.0" layoutY="100.0" prefHeight="600.0" prefWidth="843.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="18.0" layoutY="12.0" prefHeight="576.0" prefWidth="812.0" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shawdown" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="tableView_bill" layoutX="15.0" layoutY="53.0" prefHeight="509.0" prefWidth="790.0">
+                                      <columns>
+                                        <TableColumn fx:id="col_billID" prefWidth="113.0" text="Mã hóa đơn" />
+                                        <TableColumn fx:id="col_billUserId" prefWidth="132.0" text="Mã khách hàng" />
+                                          <TableColumn fx:id="col_billQuantity" prefWidth="110.0" text="Số lượng" />
+                                          <TableColumn fx:id="col_billTotal" prefWidth="110.0" text="Tổng tiền" />
+                                          <TableColumn fx:id="col_billDoe" prefWidth="132.0" text="Ngày lập" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Label layoutX="15.0" layoutY="14.0" text="Danh sách hóa đơn">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="form_account" layoutX="98.0" layoutY="100.0" prefHeight="600.0" prefWidth="843.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="330.0" prefWidth="815.0" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.bottomAnchor="256.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shawdown" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="tableView_Account" layoutX="14.0" layoutY="7.0" onMouseClicked="#accountSelectData" prefHeight="314.0" prefWidth="794.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+                                      <columns>
+                                        <TableColumn fx:id="col_userID" prefWidth="133.0" text="Mã người dùng" />
+                                        <TableColumn fx:id="col_userName" prefWidth="93.0" text="Họ và tên" />
+                                          <TableColumn fx:id="col_userEmail" prefWidth="126.0" text="Email" />
+                                          <TableColumn fx:id="col_userPhone" prefWidth="111.0" text="Số điện thoại" />
+                                          <TableColumn fx:id="col_userAddress" prefWidth="98.0" text="Địa chỉ" />
+                                          <TableColumn fx:id="col_userGender" prefWidth="82.0" text="Giới tính" />
+                                          <TableColumn fx:id="col_userDob" prefWidth="107.0" text="Ngày sinh" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="15.0" layoutY="354.0" prefHeight="232.0" prefWidth="815.0" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="13.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shawdown" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="35.0" layoutY="30.0" text="Họ và tên" />
+                                    <TextField fx:id="acc_name" layoutX="152.0" layoutY="25.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="152.0" />
+                                    <Label layoutX="35.0" layoutY="73.0" text="Email" />
+                                    <TextField fx:id="acc_email" layoutX="152.0" layoutY="68.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="152.0" />
+                                    <Label layoutX="35.0" layoutY="113.0" text="Số điện thoại" />
+                                    <TextField fx:id="acc_phone" layoutX="152.0" layoutY="108.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="152.0" />
+                                    <Label layoutX="35.0" layoutY="152.0" text="Địa chỉ" />
+                                    <TextField fx:id="acc_address" layoutX="152.0" layoutY="147.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="152.0" />
+                                    <Label layoutX="386.0" layoutY="25.0" text="Giới tính" />
+                                    <TextField fx:id="acc_gender" layoutX="463.0" layoutY="20.0" prefHeight="30.0" prefWidth="200.0" />
+                                    <Label layoutX="386.0" layoutY="68.0" text="Ngày sinh" />
+                                    <DatePicker fx:id="acc_date" layoutX="462.0" layoutY="63.0" prefHeight="30.0" prefWidth="200.0" />
+                                    <Label layoutX="386.0" layoutY="115.0" text="Tài khoản" />
+                                    <TextField fx:id="acc_account" layoutX="463.0" layoutY="110.0" prefHeight="30.0" prefWidth="200.0" />
+                                    <Label layoutX="386.0" layoutY="155.0" text="Mật khẩu" />
+                                    <TextField fx:id="acc_password" layoutX="463.0" layoutY="150.0" prefHeight="30.0" prefWidth="200.0" />
+                                    <Button fx:id="acc_updateBtn" layoutX="243.0" layoutY="189.0" mnemonicParsing="false" onAction="#accountUpdateBtn" prefHeight="30.0" prefWidth="100.0" styleClass="btn" stylesheets="@../../../java/com/javanc/values/mainFormDesign.css" text="Sửa" />
+                                    <Button fx:id="acc_deleteBtn" layoutX="429.0" layoutY="189.0" mnemonicParsing="false" onAction="#accountDeleteBtn" prefHeight="30.0" prefWidth="100.0" styleClass="btn" text="Xóa" />
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                     </children></AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

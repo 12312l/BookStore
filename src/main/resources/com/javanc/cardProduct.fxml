@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbox_product" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="240.0" stylesheets="@../../../java/com/javanc/values/cardProduct.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javanc.controller.cardProductController">
+   <children>
+      <AnchorPane prefHeight="205.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="product_ImageView" fitHeight="180.0" fitWidth="219.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="14.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="product_name" prefHeight="22.0" prefWidth="249.0" text="Tên sản phẩm">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label fx:id="product_author" layoutX="10.0" layoutY="186.0" prefHeight="26.0" prefWidth="250.0" text="Tác giả">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <AnchorPane prefHeight="42.0" prefWidth="200.0">
+         <children>
+            <Spinner fx:id="product_quantity" layoutX="13.0" layoutY="5.0" prefHeight="31.0" prefWidth="82.0" />
+            <Label fx:id="product_price" layoutX="117.0" layoutY="5.0" prefHeight="30.0" prefWidth="115.0" text="\$0.00" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="209.0" prefHeight="59.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="addCartBtn" layoutX="12.0" layoutY="11.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="115.0" styleClass="viewBtn" stylesheets="@../../../java/com/javanc/values/cardProduct.css" text="Thêm vào giỏ" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="buyBtn" layoutX="138.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#changeScreenBuy" prefHeight="31.0" prefWidth="90.0" styleClass="viewBtn" stylesheets="@../../../java/com/javanc/values/cardProduct.css" text="Mua ngay" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+   <styleClass>
+      <String fx:value="bg-white" />
+      <String fx:value="radius" />
+      <String fx:value="shawdown" />
+   </styleClass>
+</VBox>
